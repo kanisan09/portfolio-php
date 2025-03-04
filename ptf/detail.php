@@ -19,9 +19,13 @@ foreach($sql as $row){
 </div>
 <div class="right-item">
         <form action="cart-insert.php" method="post">
-                    <p>商品番号:<?= $row['id']?></p>
-                    <p>商品名:<?= $row['name']?></p>
-                    <p>価格:<?= $row['price']?>円</p>
+                    <div class="font-bdr">
+                        <p>商品ID: 000<?= $row['id']?></p>
+                        <hr>
+                        <p>商品名　<?= $row['name']?></p>
+                        <hr>
+                        <p>価格　　<?= $row['price']?>円</p>
+                        <hr>
                     <p>
                         サイズ
                                     <select name="content" id="">
@@ -39,6 +43,7 @@ foreach($sql as $row){
             <p>
                 <input type="submit" value="カートに追加">
             </p>
+</div>
         </form>
 </div>
 

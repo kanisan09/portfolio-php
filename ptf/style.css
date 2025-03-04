@@ -49,16 +49,16 @@ ul {
 }
 .img-bdr{
     border: solid 20px #ffd46f; 
-    margin-top: 40px;
-    margin-left: 50px;
-    width: 50%;
+    margin-top: 60px;
+    margin-left: 100px;
+    width: 70%;
 }
 .left-item{
     width: 50%;
     padding-right: 20px;
 }
 .right-item {
-    padding: 80px 60px; 
+    padding: 100px 80px; 
     box-sizing: border-box;
     text-align: center; 
     display: flex; 
@@ -67,6 +67,11 @@ ul {
     align-items: center; 
     transform-origin: top left;
     transform: scale(1.7);
+}
+.font-bdr{
+    border: 2px solid #e4e4e4;
+    padding: 30px;
+    box-sizing: border-box;
 }
 .left-item, .right-item{
     display: inline-block;
