@@ -53,7 +53,3 @@ if(isset($_REQUEST['keyword'])){
     </div>
 </div>
 
-
-
-
-<?php require 'footer.php'; ?>

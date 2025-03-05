@@ -32,11 +32,33 @@ form textarea{
     height: 100px;
 }
 form button[type="submit"]{
-    background-color: rgb(255, 141, 2);
+    background-color: rgb(2, 112, 255);
     color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 3px;
-    font-size: 15px;
+    font-size: 17px;
     margin-top: 10px;
+}
+.post-2{
+    width: 430px;
+    border: 3px solid #ffd46f;
+    padding:5px;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.delete{
+    background-color: rgb(255, 65, 2);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    margin-top: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+.line{
+    border-color: rgb(248, 179, 95);
 }

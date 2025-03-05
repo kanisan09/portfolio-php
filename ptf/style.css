@@ -105,3 +105,13 @@ ul {
     border-radius: 3px;
     cursor: pointer;
 }
+.dtl-button{
+    background-color: #f68103;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
