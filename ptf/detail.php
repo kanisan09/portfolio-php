@@ -37,17 +37,15 @@ foreach($sql as $row){
             <input type="hidden" name="id" value="<?= $row['id']?>">
             <input type="hidden" name="name" value="<?= $row['name']?>">
             <input type="hidden" name="price" value="<?= $row['price']?>">
-            <p>    
+            <p>
+                <input type="submit" value="カートに追加" class="dtl-button">
+            </p>
+        </form>
+        <p>    
                 <form action="login-input.php" method="post">
                     <input type="submit" value="今すぐ購入"class="dtl-button">
                 </form>
-            </p>
-            <p>
-                <form action="buy-insert.php">
-                    <input type="submit" value="カートに追加" class="dtl-button">
-                </form>
-            </p>
-        </form>
+        </p>
 </div>
 
 

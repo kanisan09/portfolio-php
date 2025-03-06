@@ -1,31 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カートの中身</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
 <?php
 if(!empty($_SESSION['product'])){
 ?>
 
-<tr>
-    <th>商品ID</th>
-    <th>商品名</th>
-    <th>価格</th>
-    <th>個数</th>
-    <th>小計</th>
-</tr>
 
 <?php
 $total = 0;
-$taxRate = 0.05; //消費税５％
+$taxRate = 0.1; //消費税10％
 foreach($_SESSION['product'] as $id=>$product):
- 
-?>
 
-<tr>
-    <td><?= $id ?></td>
-    <td><a href="detail.php?id<?= $id?>">
-    <p><a href="detail.php?id=<?= $row['id']?>">
-        <img src="image/1.<?= $row['id']?>.jpg" alt=""></a>
-    </p>
-    <td><?= $product['name']?></a></td>
-    <td><?= $product['price']?></td>
-</tr>
+?>
+    <p><img src="image/1.<?= $id ?>.jpg" alt="product" width="200"></p>
+    <p>商品ID：000<?= $id ?></p>
+    <p>商品名：<?= $product['name']?></p>
+    <p>値段：<?= $product['price']?>円</p>
+    
+
 
 
 <?php
@@ -35,9 +34,9 @@ $total += $subtotal;
 
 <tr>
     <td colspan="3">小計</td>
-    <td><?= $subtotal ?>
+    <td><?= $subtotal ?>円
     <a href="cart-delete.php?id=<?= $id ?>">削除</a>
-
+<hr>
 </td>
 </tr>
 
@@ -45,9 +44,10 @@ $total += $subtotal;
 
 <tr>
     <td colspan="4">合計</td>
-    <td><?= $total ?></td>
+    <td><?= $total ?>円</td>
 </tr>
 </table>
+<button>お支払いに進む</button>
 
 <?php
 }else{
@@ -55,3 +55,5 @@ $total += $subtotal;
 }
 
 ?>
+</body>
+</html>
