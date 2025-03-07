@@ -10,44 +10,46 @@
 
 <?php
 if(!empty($_SESSION['product'])){
-?>
 
-
-<?php
 $total = 0;
 $taxRate = 0.1; //消費税10％
-foreach($_SESSION['product'] as $id=>$product):
-
+foreach($_SESSION['product'] as $id=>$product){
+    $subtotal = $product['price'] * (1 + $taxRate);
+    $total += $subtotal;
+}
 ?>
+
+<tr>
+    <td colspan="4">合計</td>
+    <td><?= $total ?>円</td>
+</tr>
+
+<button>お支払いに進む</button>
+<hr>
+
+<?php
+foreach($_SESSION['product'] as $id => $product):
+?>
+
+
     <p><img src="image/1.<?= $id ?>.jpg" alt="product" width="200"></p>
     <p>商品ID：000<?= $id ?></p>
     <p>商品名：<?= $product['name']?></p>
     <p>値段：<?= $product['price']?>円</p>
     
 
-
-
 <?php
 $subtotal=$product['price']*(1 + $taxRate);
-$total += $subtotal;
 ?>
 
 <tr>
     <td colspan="3">小計</td>
-    <td><?= $subtotal ?>円
-    <a href="cart-delete.php?id=<?= $id ?>">削除</a>
-<hr>
-</td>
+    <td><?= number_format($subtotal) ?>円
+    <a href="cart-delete.php?id=<?= $id?>">削除</a></td>
 </tr>
+<hr>
 
 <?php endforeach; ?>
-
-<tr>
-    <td colspan="4">合計</td>
-    <td><?= $total ?>円</td>
-</tr>
-</table>
-<button>お支払いに進む</button>
 
 <?php
 }else{

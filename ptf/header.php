@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -15,13 +19,14 @@
         <nav>
             <ul>
                 <li><a href="product.php">商品</a></li>
-                <li><a href="cart-show.php">カート</a></li>
+                <li><a href="cart.php">カート</a></li>
                 <li><a href="message.php">お問い合わせ</a></li>
                 <li><a href="login-input.php">ログイン</a></li>
                 <li><a href="customer-input.php">会員登録</a></li>
             </ul>
         </nav>
     </div>
+    
 </header>
 </body>
 </html>
