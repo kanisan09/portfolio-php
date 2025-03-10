@@ -1,0 +1,35 @@
+.login-output{
+    margin-top: 100px;
+    padding: auto;
+    text-align: center;
+    font-size: 20px;
+    height: 100px;
+}  
+.aa a{
+    background-color: rgb(255, 141, 2);
+    width: 200px;
+    color: white;
+    padding: 10px 0;
+    border: none;
+    border-radius: 3px;
+    font-size: 17px;
+    margin-top: 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+.buy{
+    margin-top: 100px;
+    text-align: center;
+}
+.buy a{
+    background-color: rgb(255, 141, 2);
+    width: 200px;
+    color: white;
+    padding: 10px 0;
+    border: none;
+    border-radius: 3px;
+    font-size: 17px;
+    margin-top: 20px;
+    text-decoration: none;
+    display: inline-block;
+}

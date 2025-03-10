@@ -25,5 +25,6 @@
         </form>
         </div>
     </div>
+    <div class="logout-btn"><a href="logout-input.php">ログアウト</a></div>
 </body>
 </html>

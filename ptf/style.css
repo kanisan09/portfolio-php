@@ -40,7 +40,8 @@ ul {
     width: 30%;
     box-sizing: border-box;
     text-align: center;
-    margin: 10px;
+    margin: 17px;
+    font-size: 19px;
 }
 
 .item img {
@@ -58,7 +59,7 @@ ul {
     padding-right: 20px;
 }
 .right-item {
-    padding: 100px 80px; 
+    padding: 50px 80px; 
     box-sizing: border-box;
     text-align: center; 
     display: flex; 

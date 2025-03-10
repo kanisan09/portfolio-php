@@ -1,18 +1,13 @@
-header {
-    margin-bottom:60px;
-}
 
-
-.login-group{
-    margin-top: 60px;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 5px solid rgb(255, 141, 2);
+.log-form{
+        margin: 50px auto;
+        max-width: 400px;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 5px;
+        border: 5px solid rgb(255, 141, 2);
 }
-.login{
+.log{
     margin-bottom: 15px;
 }
 label{
@@ -26,30 +21,34 @@ input[type="password"]{
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 input[type="submit"]{
     text-align: center;
     width: 390px;
     margin-top: 10px;
-    padding: 20px;
+    padding: 15px;
     background-color: rgb(255, 141, 2);
     color: white;
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    font-size: 18px;
 }
-.logout-btn{
+.output{
+    padding-top: 50px;
     text-align: center;
+    font-size: 18px;
+}
+.cus-btn a{
+    background-color: rgb(255, 141, 2);
     width: 200px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: rgb(2, 112, 255);
     color: white;
+    padding: 10px 0;
     border: none;
     border-radius: 3px;
-    cursor: pointer;
-}
-.logout-btn a{
-    color: white;
+    font-size: 17px;
+    margin-top: 20px;
     text-decoration: none;
+    display: inline-block;
 }

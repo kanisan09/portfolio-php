@@ -42,7 +42,7 @@ if(isset($_REQUEST['keyword'])){
             <div class="id">
                 <span><?= $row['id']?></span>
             </div>
-            <a href="detail.php?id=<?= $row['id']?>"><?= $row['name']?></a>
+            <a href="detail.php?id=<?= $row['id']?>" style="text-decoration: none;"><?= $row['name']?></a>
             <span><?= $row['price']?>円</span>
             <p><a href="detail.php?id=<?= $row['id']?>"><img src="image/1.<?= $row['id']?>.jpg" alt=""></a></p>
         </div>

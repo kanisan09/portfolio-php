@@ -44,7 +44,7 @@ $posts = $sql->fetchAll(PDO::FETCH_ASSOC);
 <body>
 
 <div class="m-form">
-    <h1>お問い合わせフォーム</h1>
+    <h1>ご意見板</h1>
     <p>～ご意見、ご感想、リクエストなどお気軽にどうぞ～</p>
     
     <form method="post">

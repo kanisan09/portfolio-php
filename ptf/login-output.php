@@ -3,14 +3,16 @@
 session_start();
 require 'header.php';
 
+// セッションを削除、周回ごとに消す
 unset($_SESSION['customer']);
 
 $pdo = new PDO(
-    'mysql:host=localhost;dbname=shop;charset=utf8',
+    'mysql:host=localhost;dbname=free;charset=utf8',
     'staff',
     'password'
 );
 
+// 送られたユーザー名とパスワードに一致するデータを取得
 $login = $_REQUEST['login'];
 $password = $_REQUEST['password'];
 $query = 'SELECT * FROM customer
@@ -29,11 +31,41 @@ foreach($sql as $row){
         'password' => $row['password']
     ];
 }
-
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン</title>
+    <link rel="stylesheet" href="log2.css">
+</head>
+<body>
+<div class="login-output">
+    <img src="image/log3.jpg" alt="PCひつじ">
+<?php
 if(isset($_SESSION['customer'])){
-    echo 'ようこそ、',
-    $_SESSION['customer']['name'],'さん。';
+    ?>
+        <p>ようこそ、
+        <?= $_SESSION['customer']['name']?>さん。</p>
+        <div class="aa">
+            <p><a href="buy.php">購入手続きへ</a></p>
+        </div>
+        <div class="aa">
+            <p>
+                <a href="product.php">TOPへ</a>
+            </p>
+        </div>
+    <?php
 }else{
-    echo 'ログイン名またはパスワード名が違います。';
+    ?>
+    <p>ログイン名またはパスワード名が違います。</p>
+    <div class="aa">
+        <p><a href="product.php">TOPへ</a></p>
+    </div>
+    <?php
 }
 ?>
+</div>
+</body>
+</html>
